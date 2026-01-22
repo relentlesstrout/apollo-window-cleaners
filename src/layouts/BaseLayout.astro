@@ -1,0 +1,29 @@
+---
+import Navigation from "../components/Navigation.astro"
+import Footer from "../components/Footer.astro"
+import "../styles/global.css";
+const { title = "Apollo Window Cleaners" } = Astro.props;
+const { header = "Home" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>{title}</title>
+        <meta name="viewport" content="width=device-width" />
+    </head>
+    <body>
+        <header>
+            <Navigation/>
+        </header>
+
+    <main>
+        <h1>{header}</h1>
+        <slot name = "content" />
+    </main>
+
+    <Footer/>
+
+    </body>
+</html>
