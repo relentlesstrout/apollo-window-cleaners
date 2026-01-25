@@ -1,5 +1,9 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";---
-<BaseLayout title="Quote" header="Quote"/>
+import BaseLayout from "../layouts/BaseLayout.astro";
+import QuoteCalculator from "../components/React/QuoteCalculator";
+---
+<BaseLayout title="Quote" header="Quote">
+    <QuoteCalculator client:load />
+</BaseLayout>
 
 
