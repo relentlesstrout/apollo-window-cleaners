@@ -1,5 +1,24 @@
 ---
+const heroImage = '/public/windowcleaning4.jpg';
 ---
-<div class="">
+<section class="relative w-full min-h-[60vh] lg:min-h-[80vh] flex items-start">
+    <!-- Background image -->
+    <div
+            class="absolute inset-0 w-full h-full bg-cover bg-center filter blur-xs"
+            style={`background-image: url(${heroImage});`}
+    ></div>
 
-</div>
+    <!-- Optional dark overlay for readability -->
+    <div class="absolute inset-0 bg-black/30"></div>
+
+    <!-- Text overlay (top-left) -->
+    <div class="relative z-10 p-6 flex flex-col gap-5 items-start">
+        <h1 class="text-white text-7xl font-bold">Professional</h1>
+        <h1 class="text-white text-7xl font-bold">Window Cleaners</h1>
+        <hr class="border-t-2 border-gray-400 opacity-50 w-full">
+        <h2 class="text-white text-5xl font-semibold">Serving Tyne Valley</h2>
+        <h3 class="text-white text-3xl font-normal">Window Cleaning | UPVC | Conservatories</h3>
+        
+    </div>
+</section>
+

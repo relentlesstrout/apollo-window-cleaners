@@ -1,10 +1,8 @@
 ---
 import Navigation from "../components/Navigation.astro"
 import Footer from "../components/Footer.astro"
-import Hero from "../components/Hero.js"
 import "../styles/global.css";
 const { title = "Apollo Window Cleaners" } = Astro.props;
-const { header = "Home" } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -14,14 +12,23 @@ const { header = "Home" } = Astro.props;
         <title>{title}</title>
         <meta name="viewport" content="width=device-width" />
     </head>
-    <body>
-        <header>
+    <body class="min-h-screen">
+    <div class="flex min-h-screen flex-col">
+
+        <header class="shrink-0">
             <Navigation/>
-            <slot/>
         </header>
-        <main>
-            <slot/>
+
+        <main class="flex-1">
+            <slot name="hero"
+            <div class="mx-auto max-w-7xl px-4">
+                <slot name="content"/>
+            </div>
         </main>
-    <Footer/>
+
+        <footer class="shrink-0">
+            <Footer/>
+        </footer>
+    </div>
     </body>
 </html>
