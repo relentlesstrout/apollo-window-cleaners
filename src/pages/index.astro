@@ -1,9 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
-import Carousel from "../components/React/ReactCarousel.jsx"
+import Hero from "../components/Hero.astro"
 ---
 <BaseLayout title="Home" header="Home">
-    <div class=" bg-blue-950">
-        <Carousel client:load />
-    </div>
+    <Hero/>
 </BaseLayout>
