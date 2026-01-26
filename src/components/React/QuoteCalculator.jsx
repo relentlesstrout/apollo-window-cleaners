@@ -6,7 +6,7 @@ function QuoteCalculator() {
         smallWindows: 0,
         largeWindows: 0
     });
-    const [quote, setQuote] = useState(0);
+    const [quote, setQuote] = useState(5);
 
     const frenchDoorsPrice = 2
     const smallWindowsPrice = 1
