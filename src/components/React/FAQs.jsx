@@ -1,19 +1,18 @@
 import React, {useState} from 'react';
 
-const faqs = [
-    {
-        question: "Do you clean commercial buildings?",
-        answer: "Yes, we offer professional commercial cleaning for offices and shops."
-    },
-    {
-        question: "What areas do you cover?",
-        answer: "We cover Blaydon, Gateshead, Newcastle, and surrounding areas."
-    },
-    {
-        question: "Do you provide gutter cleaning?",
-        answer: "Absolutely! We provide full gutter cleaning and maintenance."
-    },
-];
+let faqs = [];
+let error = null;
+
+try {
+    const response = await fetch("http://localhost:8000/api/faqs");
+    if (!response.ok) {
+        throw new Error(`status ${response.status}`);
+    }
+    faqs = await response.json();
+} catch (e) {
+    error = e.message;
+    console.error(error);
+}
 
 function FAQs() {
     const [openIndex, setOpenIndex] = useState(null);
