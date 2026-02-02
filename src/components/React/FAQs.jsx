@@ -23,21 +23,22 @@ function FAQs() {
     return (
         <div className="FAQs mt-4">
             {faqs.map((faq, index) => (
-                <div key={index} className="FAQ border rounded-md p-4 mt-4 shadow-sm">
+                <div key={index} className="FAQ rounded-md border-gray-100 p-4 mt-4 shadow-sm">
                     <button
                         onClick={() => toggle(index)}
                         className="w-full text-left flex justify-between items-center">
                         <span className="font-medium">{faq.question}</span>
                         <span>{openIndex === index ? "−" : "+"}</span>
                     </button>
-                    {openIndex === index && (
-                        <div className="mt-2 text-gray-700">
-                            {faq.answer}
-                        </div>
-                    )}
+
+                    <div className={`mt-2 text-gray-700 overflow-hidden transition-all duration-500 ease-out 
+                        ${openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}
+                        `}
+                    >
+                        {faq.answer}
+                    </div>
                 </div>
-                )
-            )}
+            ))}
         </div>
     )
 }
