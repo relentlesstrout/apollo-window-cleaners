@@ -1,0 +1,11 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import QuoteCalculator from "../components/React/QuoteCalculator";
+---
+<BaseLayout title="Quote">
+    <section slot="content">
+        <QuoteCalculator client:load />
+    </section>
+</BaseLayout>
+
+
