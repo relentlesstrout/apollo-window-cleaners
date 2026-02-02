@@ -4,6 +4,11 @@ import QuoteCalculator from "../components/React/QuoteCalculator";
 ---
 <BaseLayout title="Quote">
     <section slot="content">
+        <h1 class="font-semibold text-3xl mt-4">Quote Calculator</h1>
+        <div class="w-lg justify-center">
+            <h2 class="font-semibold mt-4">Use our quote calculator to generate an estimate for your property.</h2>
+            <h3 class="font-normal mt-4">Remember this is only an estimate. For a more accurate quote send a quote request using the form below and one of our team will get in touch. (We have a flat charge of £3 added to each quote)</h3>
+        </div>
         <QuoteCalculator client:load />
     </section>
 </BaseLayout>
